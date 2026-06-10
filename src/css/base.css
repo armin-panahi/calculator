@@ -18,4 +18,12 @@ body {
   min-height: 100dvh;
 
   overflow: hidden;
+
+  background:
+  radial-gradient(circle at top left,#7c5cff22,transparent 35%),
+  radial-gradient(circle at bottom right,#4fd1c522,transparent 35%),
+  var(--bg-primary);
+
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
