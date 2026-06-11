@@ -1,173 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Nova Calculator</title>
+    <title>Nova Calculator</title>
 
-  <link rel="shortcut icon" href="./assets/images/nova-logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/new-nova.png"
+      type="image/x-icon"
+    />
 
-  <link rel="stylesheet" href="./src/css/variables.css">
-  <link rel="stylesheet" href="./src/css/base.css">
-  <link rel="stylesheet" href="./src/css/layout.css">
-  <link rel="stylesheet" href="./src/css/calculator.css">
-  <link rel="stylesheet" href="./src/css/responsive.css">
-  <link rel="stylesheet" href="./src/css/animations.css">
+    <link rel="stylesheet" href="./src/css/variables.css" />
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/layout.css" />
+    <link rel="stylesheet" href="./src/css/calculator.css" />
+    <link rel="stylesheet" href="./src/css/responsive.css" />
+    <link rel="stylesheet" href="./src/css/animations.css" />
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-<body>
+  <body>
+    <div class="drawer-overlay"></div>
 
-  <aside class="side-drawer">
+    <main class="app">
+      <aside class="side-drawer">
+        <div class="drawer-header">
+          <h2>Nova</h2>
+          <p>Utilities</p>
+        </div>
 
-    <div class="drawer-header">
-      <h2>Nova</h2>
-      <p>Utilities</p>
-    </div>
+        <nav class="drawer-menu">
+          <button class="drawer-item active">
+            <i data-lucide="calculator"></i>
+            <span>Calculator</span>
+          </button>
 
-    <nav class="drawer-menu">
+          <button class="drawer-item">
+            <i data-lucide="ruler"></i>
+            <span>Unit Converter</span>
+          </button>
 
-      <button class="drawer-item active">
-        <i data-lucide="calculator"></i>
-        <span>Calculator</span>
-      </button>
+          <button class="drawer-item">
+            <i data-lucide="badge-dollar-sign"></i>
+            <span>Currency Converter</span>
+          </button>
 
-      <button class="drawer-item">
-        <i data-lucide="ruler"></i>
-        <span>Unit Converter</span>
-      </button>
+          <button class="drawer-item">
+            <i data-lucide="sigma"></i>
+            <span>Scientific Mode</span>
+          </button>
+        </nav>
+      </aside>
 
-      <button class="drawer-item">
-        <i data-lucide="badge-dollar-sign"></i>
-        <span>Currency Converter</span>
-      </button>
+      <section class="calculator">
+        <header class="calculator-header">
+          <div class="brand">
+            <span class="brand-icon"> ✦ </span>
 
-      <button class="drawer-item">
-        <i data-lucide="sigma"></i>
-        <span>Scientific Mode</span>
-      </button>
-
-    </nav>
-
-  </aside>
-
-  <div class="drawer-overlay"></div>
-
-  <main class="app">
-
-    <section class="calculator">
-
-      <header class="calculator-header">
-
-        <div class="brand">
-
-          <span class="brand-icon">
-            ✦
-          </span>
-
-          <div>
-            <h1>Nova</h1>
-            <p>Smart Calculator</p>
+            <div>
+              <h1>Nova</h1>
+              <p>Smart Calculator</p>
+            </div>
           </div>
 
-        </div>
+          <div class="header-actions">
+            <button class="history-btn">
+              <i data-lucide="history"></i>
+            </button>
 
-        <div class="header-actions">
+            <button class="theme-btn">
+              <i data-lucide="moon"></i>
+            </button>
 
-          <button class="history-btn">
-            <i data-lucide="history"></i>
-          </button>
-          
-          <button class="theme-btn">
-            <i data-lucide="moon"></i>
-          </button>
-          
-          <button class="menu-btn">
-            <i data-lucide="menu"></i>
-          </button>
+            <button class="menu-btn">
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </header>
 
-        </div>
+        <section class="display-section">
+          <div class="last-calculation">Last calculation</div>
 
-      </header>
+          <div class="expression">58 + 12</div>
 
-      <section class="display-section">
+          <div class="result">70</div>
+        </section>
 
-        <div class="last-calculation">
-          Last calculation
-        </div>
-
-        <div class="expression">
-          58 + 12
-        </div>
-
-        <div class="result">
-          70
-        </div>
-
-      </section>
-
-      <div class="history-panel">
-
-        <div class="history-header">
-          <h2>History</h2>
-        </div>
-
-        <div class="history-list">
-
-          <div class="history-item">
-            58 + 12 = 70
+        <div class="history-panel">
+          <div class="history-header">
+            <h2>History</h2>
           </div>
 
+          <div class="history-list">
+            <div class="history-item">58 + 12 = 70</div>
+          </div>
         </div>
 
-      </div>
+        <section class="keypad">
+          <button class="action">AC</button>
+          <button class="action">( )</button>
+          <button class="action">%</button>
+          <button class="operator">÷</button>
 
-      <section class="keypad">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="operator">×</button>
 
-        <button class="action">AC</button>
-        <button class="action">( )</button>
-        <button class="action">%</button>
-        <button class="operator">÷</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="operator">−</button>
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="operator">×</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="operator">+</button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="operator">−</button>
-
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="operator">+</button>
-
-        <button class="zero">0</button>
-        <button>.</button>
-        <button class="equal">=</button>
-
+          <button class="zero">0</button>
+          <button>.</button>
+          <button class="equal">=</button>
+        </section>
       </section>
+    </main>
 
-    </section>
+    <script>
+      lucide.createIcons();
+    </script>
 
-  </main>
-
-  <script>
-    lucide.createIcons();
-  </script>
-
-  <script src="./src/js/app.js"></script>
-  <script src="./src/js/calculator.js"></script>
-  <script src="./src/js/history.js"></script>
-  <script src="./src/js/theme.js"></script>
-  <script src="./src/js/storage.js"></script>
-
-</body>
+    <script src="./src/js/app.js"></script>
+    <script src="./src/js/calculator.js"></script>
+    <script src="./src/js/history.js"></script>
+    <script src="./src/js/theme.js"></script>
+    <script src="./src/js/storage.js"></script>
+  </body>
 </html>

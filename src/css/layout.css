@@ -1,33 +1,44 @@
-/* ==========================
-   APP WRAPPER
-========================== */
-
 .app {
   width: 100%;
+
   min-height: 100svh;
 
   display: flex;
 
   justify-content: center;
+
   align-items: center;
+
+  padding: 16px;
 }
 
-/* ==========================
-   DESKTOP POSITIONING
-========================== */
+/* ==================================
+   DESKTOP
+================================== */
 
-@media (min-width: 768px) {
-
-  .app {
-    padding: 32px;
-  }
-
-}
-
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
 
   .app {
-    padding: 48px;
+
+    width: 100%;
+
+    /* max-width: 1400px; */
+
+    /* margin: 0 auto; */
+
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 24px;
+
+    padding: 24px;
+
+    height: calc(100svh - 48px);
   }
 
 }
