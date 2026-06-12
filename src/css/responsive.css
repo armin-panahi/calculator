@@ -47,20 +47,29 @@
    TABLET
 ================================== */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1199px) {
 
   .app {
-    padding: 20px;
+    padding: 16px;
+  }
+
+  .side-drawer {
+    display: none;
   }
 
   .calculator {
+
     width: 100%;
 
-    max-width: 650px;
+    max-width: 900px;
+
+    margin: 0 auto;
 
     border-radius: 32px;
+  }
 
-    box-shadow: var(--shadow);
+  .menu-btn {
+    display: flex;
   }
 
 }
@@ -69,7 +78,7 @@
    DESKTOP
 ================================== */
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
 
   .app {
 
