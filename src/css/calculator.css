@@ -3,25 +3,22 @@
 ================================== */
 
 .calculator {
-  width: 100%;
+    width: 100%;
 
-  height: 100%;
+    display: flex;
+    flex-direction: column;
 
-  display: flex;
-  flex-direction: column;
+    height: 100%;
 
-  position: relative;
+    border-radius: 32px;
 
-  border-radius: 32px;
+    overflow: hidden;
 
-  overflow: hidden;
+    background: rgba(255,255,255,.05);
 
-  background: rgba(255,255,255,.05);
+    backdrop-filter: blur(30px);
 
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-
-  border: 1px solid var(--border);
+    border: 1px solid var(--border);
 }
 
 /* ==================================
@@ -162,23 +159,15 @@
 ================================== */
 
 .display-section {
-   display: flex;
-   flex-direction: column;
+    flex: 1;
 
-   justify-content: flex-end;
+    min-height: 0;
 
-   min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-  flex: 1;
-
-  min-height: 180px;
-
-  align-items: flex-end;
-
-  padding: 20px;
-
-  position: relative;
-  z-index: 2;
+    padding: 24px;
 }
 
 /* ==================================
@@ -242,18 +231,15 @@
 ================================== */
 
 .keypad {
-  display: grid;
+    flex-shrink: 0;
 
-  grid-template-columns: repeat(4, 1fr);
+    padding: 16px;
 
-  gap: 10px;
+    display: grid;
 
-  padding: clamp(12px, 2vw, 24px);
+    grid-template-columns: repeat(4, 1fr);
 
-  flex-shrink: 0;
-
-  position: relative;
-  z-index: 2;
+    gap: 12px;
 }
 
 /* ==================================
@@ -261,7 +247,7 @@
 ================================== */
 
 .keypad button {
-  height: clamp(52px, 7vh, 72px);
+  height: clamp(50px, 8vh, 72px);
 
   border-radius: 22px;
 
